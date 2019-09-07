@@ -6,10 +6,22 @@
 #include "OpenGlFuncTools.h"
 #include "Orbital.h"
 #include <ctime>
+/**
+ * @brief The SpaceEnterprise class- Represent A Space Ship Instanc Inherits From Oribital Class
+ */
 class SpaceEnterprise : public Orbital
 {
+    /**
+     * @brief verticesPoint-vertices of the spaceship
+     */
     std::vector<vector<GLfloat>> verticesPoint;
+    /**
+     * @brief facePoint-represent the face index of the faces
+     */
     std::vector<vector<GLint>> facePoint;
+    /**
+     * @brief eyesPosition- the position of the world view eye
+     */
     vector<GLfloat> eyesPosition;
     vector<GLfloat> eyeOffset;
     public:
@@ -31,8 +43,17 @@ class SpaceEnterprise : public Orbital
         bool setEyesPosition(const vector<GLfloat> &value);
 
 private:
-        vector<GLfloat> shieldColour;
+        /**
+         * @brief shieldColour- toggle the shiel color
+         */
+        vector<GLfloat> shieldColour;/**
+         * @brief shieldOn-shield flag bool
+         */
         bool shieldOn;
+        /**
+         * @brief readFile-reads the object fle
+         * @param fileName-filename string
+         */
         void readFile(const std::string& fileName);
 
 

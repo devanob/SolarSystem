@@ -12,7 +12,7 @@ Sun::Sun(const float &radius, const vector<GLfloat> &colour) : Orbital(radius,0.
     this->setColour(colour);
     this->setOrbitalCircle(false);
     this->setCoronoOn(false);
-    this->lengthCorona = 500;
+    this->lengthCorona = 800;
     srand(time(NULL));
     this->generateConorona();
 
@@ -32,7 +32,7 @@ void Sun::draw()
 {
     if (needsRedraw == true){
         preDrawSetup();
-        glLineWidth(100.0f);
+        glLineWidth(60.0f);
         glColor4f(this->colour.x, this->colour.y, this->colour.z,1.0);
         glutSolidSphere(getObjRadius(),90,90);
         if (getCoronoOn() == true){

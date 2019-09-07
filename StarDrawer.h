@@ -6,6 +6,9 @@
 #include <cmath>
 #include<ctime>
 #include "Orbital.h"
+/**
+ * @brief The StarDrawer class
+ */
 class StarDrawer:public Orbital
 {
     private: 
